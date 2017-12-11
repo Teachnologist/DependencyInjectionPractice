@@ -1,16 +1,19 @@
 package jtriche.dependencyinjection.springdi.controllers;
 
 import jtriche.dependencyinjection.springdi.services.GreetingServicesInterface;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
+@Controller
 public class ConstructorInjectedController {
 
     private GreetingServicesInterface greetingService;
-
+    //@Autowired should be placed for communication to other developers, not necessity in Constructor Injected Controllers in Spring 4+
     public ConstructorInjectedController(GreetingServicesInterface greetingService){
         this.greetingService = greetingService;
     }
 
-    String sayHello(){
+    public String sayHello(){
         return greetingService.sayGreeting();
     }
 
