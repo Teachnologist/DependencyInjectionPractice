@@ -2,6 +2,7 @@ package jtriche.dependencyinjection.springdi.controllers;
 
 import jtriche.dependencyinjection.springdi.services.GreetingServicesInterface;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 @Controller
@@ -14,7 +15,8 @@ public class SetterInjectorController {
     }
 
     @Autowired
-    public void setGreetingService(GreetingServicesInterface greetingService){
+
+    public void setGreetingService(@Qualifier("setterGreetingService") GreetingServicesInterface greetingService){
         this.greetingService = greetingService;
     }
 

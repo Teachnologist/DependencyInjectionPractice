@@ -68,6 +68,7 @@ public class SpringdiApplication {
 
 		/*use of bean example*/
 		SimpleCLController castedbeanfromcontroller = (SimpleCLController) appcontext.getBean("simpleCLController");
-		castedbeanfromcontroller.writeline();
+		System.out.println(castedbeanfromcontroller.writeline());
+
 	}
 }
