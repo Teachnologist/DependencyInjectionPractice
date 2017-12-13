@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 /**
  * Created by jt on 5/24/17.
  */
-@Qualifier
+@Component
 public class GreetingRepositoryImpl implements GreetingRepository {
 
     @Override

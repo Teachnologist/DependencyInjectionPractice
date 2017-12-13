@@ -12,9 +12,7 @@ import org.springframework.stereotype.Controller;
 public class MyController {
 
     @Autowired
-    @Qualifier("greetingServiceImpl")
     private GreetingService greetingService;
-
 
     public MyController(GreetingService greetingService) {
         this.greetingService = greetingService;
